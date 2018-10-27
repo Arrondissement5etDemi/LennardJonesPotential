@@ -47,7 +47,7 @@ public class SquareLattice {
 	public static double ljPot(double scale) {
 		double result = 0;
 		for (int k = 1; k <= 1000; k++) {
-			double potK = LjPotential.lj(k*scale);
+			double potK = LjPotential.lj(Math.sqrt(k)*scale);
 			double degK = (double) degeneracy(k);
 			double termK = potK * degK;
 			result += termK;
